@@ -1,0 +1,149 @@
+---
+export interface Props {
+    id: string;
+}
+
+const id = Astro.props.id;
+---
+
+<section class="py-12 bg-gray-50 sm:py-16 lg:py-20" id={id}>
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto text-center xl:max-w-2xl">
+            <h2
+                class="text-3xl font-bold leading-tight text-gray-900 sm:text-4xl xl:text-5xl font-pj"
+            >
+                Writing SQL sucks - we help you to avoid that
+            </h2>
+        </div>
+
+        <div
+            class="grid max-w-4xl grid-cols-1 mx-auto mt-8 text-center gap-y-4 sm:gap-x-8 sm:grid-cols-2 sm:mt-12 lg:mt-20 sm:text-left"
+        >
+            <div class="space-y-4 sm:space-y-8">
+                <div class="overflow-hidden bg-white shadow-md rounded-xl">
+                    <div class="p-9">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="w-12 h-12 mx-auto text-gray-400 sm:mx-0"
+                            fill="#148DFC"
+                            viewBox="0 0 448 512"
+                        >
+                            <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"
+                            ></path>
+                        </svg>
+                        <h3
+                            class="mt-8 text-2xl font-bold text-gray-900 sm:mt-20 font-pj"
+                        >
+                            Schema inference
+                        </h3>
+                        <p class="mt-6 text-base text-gray-600 font-pj">
+                            We use vector search and GPT to understand structure
+                            of your database schema.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden bg-white shadow-md rounded-xl">
+                    <div class="p-9">
+                        <svg
+                            class="w-12 h-12 mx-auto text-gray-400 sm:mx-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#148DFC"
+                            viewBox="0 0 576 512"
+                            stroke="currentColor"
+                        >
+                            <path
+                                d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"
+                            ></path>
+                        </svg>
+                        <h3
+                            class="mt-8 text-2xl font-bold text-gray-900 sm:mt-20 font-pj"
+                        >
+                            Automatic charts
+                        </h3>
+                        <p class="mt-6 text-base text-gray-600 font-pj">
+                            Using the structure of your query output, we
+                            automatically generate multiple charts to visualize
+                            your findings.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4 sm:space-y-8">
+                <div class="relative">
+                    <div class="absolute -inset-1">
+                        <div
+                            class="w-full h-full rotate-180 opacity-30 blur-lg filter"
+                            style="background: linear-gradient(90deg, #148DFC -0.55%, #32A1FD 22.86%, #4FB5FE 48.36%, #6DC8FE 73.33%, #8ADCFF 99.34%)"
+                        >
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative overflow-hidden bg-white shadow-md rounded-xl"
+                    >
+                        <div class="p-9">
+                            <svg
+                                class="w-12 h-12 mx-auto text-gray-400 sm:mx-0"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="#148DFC"
+                                viewBox="0 0 512 512"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm192 32H160V352H352V160z"
+                                ></path>
+                            </svg>
+                            <h3
+                                class="mt-8 text-2xl font-bold text-gray-900 sm:mt-20 font-pj"
+                            >
+                                AI-powered SQL generation
+                            </h3>
+                            <p class="mt-6 text-base text-gray-600 font-pj">
+                                Given your plain English query and database
+                                schema, we generate SQL using powers of GPT.
+                            </p>
+                            <p class="mt-6 text-base text-gray-600 font-pj">
+                                DataQuestion comes with full-fledged SQL edtior
+                                allowing you to quickly correct the GPT output
+                                when needed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="overflow-hidden bg-white shadow-md rounded-xl">
+                    <div class="p-9">
+                        <svg
+                            class="w-12 h-12 mx-auto text-gray-400 sm:mx-0"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#148DFC"
+                            viewBox="0 0 640 512"
+                            stroke="currentColor"
+                        >
+                            <path
+                                d="M0 336c0 79.5 64.5 144 144 144H512c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"
+                            ></path>
+                        </svg>
+                        <h3
+                            class="mt-8 text-2xl font-bold text-gray-900 sm:mt-20 font-pj"
+                        >
+                            Dashboards and reports
+                        </h3>
+                        <p class="mt-6 text-base text-gray-600 font-pj">
+                            Combine charts and tables into dashboards, invite
+                            your colleagues to collaborate.
+                        </p>
+                        <p class="mt-6 text-base text-gray-600 font-pj">
+                            Receive email reports, share dashboards privately or
+                            publicly. Everything in the browser.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

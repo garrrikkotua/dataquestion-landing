@@ -1,0 +1,334 @@
+---
+export interface Props {
+    id: string;
+}
+
+const id = Astro.props.id;
+---
+
+<section class="py-12 bg-gray-50 sm:py-16 lg:py-20" id={id}>
+    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h2
+                class="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj"
+            >
+                Frequently Asked Questions
+            </h2>
+            <p class="max-w-lg mx-auto mt-6 text-base text-gray-600 font-pj">
+                Some of the most asked questions about our product
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto mt-8 sm:mt-14">
+            <div class="space-y-4">
+                <div class="relative">
+                    <div class="absolute -inset-1">
+                        <div
+                            class="w-full h-full mx-auto opacity-30 blur-lg filter"
+                            style="background: linear-gradient(90deg, #148DFC -0.55%, #32A1FD 22.86%, #4FB5FE 48.36%, #6DC8FE 73.33%, #8ADCFF 99.34%)"
+                        >
+                        </div>
+                    </div>
+
+                    <div
+                        x-data={`{
+                              id: 1,
+                              get expanded() {
+                                  return this.active === this.id
+                              },
+                              set expanded(value) {
+                                  this.active = value ? this.id : null
+                              },
+                          }`}
+                        role="region"
+                        class="relative overflow-hidden bg-white border border-gray-200 rounded-xl"
+                    >
+                        <h3>
+                            <button
+                                @click="expanded = !expanded"
+                                :aria-expanded="expanded"
+                                class="flex items-center justify-between w-full px-6 py-5 text-xl font-bold text-left text-gray-900 sm:p-8 font-pj"
+                            >
+                                <span> Which databases do you support?</span>
+                                <span
+                                    x-show="expanded"
+                                    aria-hidden="true"
+                                    class="ml-4"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-gray-900"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M20 12H4"></path>
+                                    </svg>
+                                </span>
+                                <span
+                                    x-show="!expanded"
+                                    aria-hidden="true"
+                                    class="ml-4"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-gray-900"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M12 4v16m8-8H4"></path>
+                                    </svg>
+                                </span>
+                            </button>
+                        </h3>
+
+                        <div x-show="expanded" x-collapse>
+                            <div class="px-6 pb-6 sm:px-8 sm:pb-8">
+                                Currently we offer support for Postgres and
+                                MySQL. Support for other databases is coming
+                                soon.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    x-data={`
+                        {
+                            id: 2,
+                            get expanded() {
+                                return this.active === this.id
+                            },
+                            set expanded(value) {
+                                this.active = value ? this.id : null
+                            },
+                        }`}
+                    role="region"
+                    class="overflow-hidden bg-white border border-gray-200 rounded-xl"
+                >
+                    <h3>
+                        <button
+                            @click="expanded = !expanded"
+                            :aria-expanded="expanded"
+                            class="flex items-center justify-between w-full px-6 py-5 text-xl font-bold text-left text-gray-900 sm:p-8 font-pj"
+                        >
+                            <span> Is DataQuestion safe to use?</span>
+                            <span
+                                x-show="expanded"
+                                aria-hidden="true"
+                                class="ml-4"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-900"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 12H4"></path>
+                                </svg>
+                            </span>
+                            <span
+                                x-show="!expanded"
+                                aria-hidden="true"
+                                class="ml-4"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-900"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </h3>
+
+                    <div x-show="expanded" x-collapse>
+                        <div class="px-6 pb-6 sm:px-8 sm:pb-8">
+                            All database credentials are encrypted and stored in
+                            a secure database. We use TLS protocol for all
+                            communication between your database and our servers.
+                            We never store any of your data.
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    x-data={`
+                            {
+                                id: 3,
+                                get expanded() {
+                                    return this.active === this.id
+                                },
+                                set expanded(value) {
+                                    this.active = value ? this.id : null
+                                },
+                            }
+                        `}
+                    role="region"
+                    class="overflow-hidden bg-white border border-gray-200 rounded-xl"
+                >
+                    <h3>
+                        <button
+                            @click="expanded = !expanded"
+                            :aria-expanded="expanded"
+                            class="flex items-center justify-between w-full px-6 py-5 text-xl font-bold text-left text-gray-900 sm:p-8 font-pj"
+                        >
+                            <span>
+                                Do I need any experience with SQL to use
+                                DataQuestion?
+                            </span>
+                            <span
+                                x-show="expanded"
+                                aria-hidden="true"
+                                class="ml-4"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-900"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 12H4"></path>
+                                </svg>
+                            </span>
+                            <span
+                                x-show="!expanded"
+                                aria-hidden="true"
+                                class="ml-4"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-900"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </h3>
+
+                    <div x-show="expanded" x-collapse>
+                        <div class="px-6 pb-6 sm:px-8 sm:pb-8">
+                            Some knowledge of SQL is advised. Sometimes AI might
+                            generate a query that is not optimal or a bit off,
+                            so you might need to tweak it a bit. That said, we
+                            never run any queries on your database without your
+                            approval. We also support read-only mode, so you
+                            don't have to worry about altering your data.
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    x-data={`{
+                            id: 4,
+                            get expanded() {
+                                return this.active === this.id
+                            },
+                            set expanded(value) {
+                                this.active = value ? this.id : null
+                            },
+                        }`}
+                    role="region"
+                    class="overflow-hidden bg-white border border-gray-200 rounded-xl"
+                >
+                    <h3>
+                        <button
+                            @click="expanded = !expanded"
+                            :aria-expanded="expanded"
+                            class="flex items-center justify-between w-full px-6 py-5 text-xl font-bold text-left text-gray-900 sm:p-8 font-pj"
+                        >
+                            <span>
+                                Can I use DataQuestion as a bussiness
+                                intelligence or a data analytics tool?
+                            </span>
+                            <span
+                                x-show="expanded"
+                                aria-hidden="true"
+                                class="ml-4"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-900"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M20 12H4"></path>
+                                </svg>
+                            </span>
+                            <span
+                                x-show="!expanded"
+                                aria-hidden="true"
+                                class="ml-4"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-gray-900"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 4v16m8-8H4"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </h3>
+
+                    <div x-show="expanded" x-collapse>
+                        <div class="px-6 pb-6 sm:px-8 sm:pb-8">
+                            Of course! This is excatly what DataQuestion is
+                            designed for. You can use it to generate reports,
+                            charts, dashboards, and more. We indeed try to focus
+                            on a more technical audience due to the fact that
+                            users should understand the output of AI generated
+                            queries. But in general, you can think of
+                            DataQuestion as a GitHub Copilot for SQL inside your
+                            business intelligence tool.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
