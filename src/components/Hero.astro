@@ -30,10 +30,9 @@
           </a>
 
           <a
-            href="#"
-            title=""
             class="inline-flex items-center justify-center w-full px-6 py-3 mt-4 text-lg font-bold text-gray-900 transition-all duration-200 border-2 border-gray-400 sm:w-auto sm:mt-0 rounded-xl font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-900 focus:bg-gray-900 hover:text-white focus:text-white hover:border-gray-900 focus:border-gray-900"
             role="button"
+            id="scrollButton"
           >
             <svg
               class="w-5 h-5 mr-2"
@@ -49,7 +48,7 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"></path>
             </svg>
-            Watch free demo
+            Watch a demo
           </a>
         </div>
 
@@ -62,14 +61,34 @@
         <div class="absolute inset-0 h-2/3 bg-gray-50"></div>
         <div class="relative mx-auto">
           <div class="lg:max-w-6xl lg:mx-auto">
-            <img
+            <!-- <img
               class="transform scale-110"
               src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/2/illustration.png"
               alt=""
-            />
+            /> -->
+            <video
+              id="myVideo"
+              class="transform scale-75 rounded-lg shadow-xl"
+              muted
+              controls
+              autoplay
+            >
+              <source src="demo.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
       </div>
     </div>
   </section>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("myVideo");
+    const scrollButton = document.getElementById("scrollButton");
+
+    scrollButton?.addEventListener("click", () => {
+      video?.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>

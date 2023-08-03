@@ -91,7 +91,7 @@ const Header = () => {
 
             <div class="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-10">
               <a
-                href="https://app.dataquestion.com"
+                href="https://app.dataquestion.io/auth/login"
                 title=""
                 class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
               >
@@ -100,7 +100,7 @@ const Header = () => {
               </a>
 
               <a
-                href="https://app.dataquestion.com"
+                href="https://app.dataquestion.io/auth/signup"
                 title=""
                 class="inline-flex items-center justify-center px-6 py-3 text-base font-bold leading-7 text-white transition-all duration-200 bg-brand border border-transparent rounded-xl hover:bg-brand-light font-pj focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
                 role="button"
