@@ -61,23 +61,21 @@
         <div class="absolute inset-0 h-2/3 bg-gray-50"></div>
         <div class="relative mx-auto">
           <div class="lg:max-w-6xl lg:mx-auto">
-            <!-- <img
-              class="transform scale-110"
-              src="https://cdn.rareblocks.xyz/collection/clarity/images/hero/2/illustration.png"
-              alt=""
-            /> -->
-            <video
-              id="myVideo"
-              class="transform scale-75 rounded-lg shadow-xl"
-              muted
-              controls
-              autoplay
-            >
-              <source
-                src="https://pub-18662031c268404a8d060de159d2f5ba.r2.dev/demo.mp4"
-                type="video/mp4"
-              />
-            </video>
+            <div class="aspect-video text-center min-h-[50px]">
+              <video
+                id="myVideo"
+                class="transform scale-75 rounded-lg shadow-xl"
+                muted
+                controls
+                autoplay
+                preload="auto"
+              >
+                <source
+                  src="https://pub-18662031c268404a8d060de159d2f5ba.r2.dev/demo.mp4"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
           </div>
         </div>
       </div>
