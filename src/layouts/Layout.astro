@@ -31,5 +31,14 @@ const { title } = Astro.props;
     <slot />
     <CTA />
     <Footer />
+    <script is:inline src="https://cdn.paddle.com/paddle/paddle.js"></script>
+    <script>
+      const isSandbox = import.meta.env.PUBLIC_PADDLE_IS_SANDBOX === "true";
+      if (isSandbox) {
+        Paddle.Environment.set("sandbox");
+      }
+      const vendorId = parseInt(import.meta.env.PUBLIC_PADDLE_VENDOR_ID);
+      Paddle.Setup({ vendor: vendorId });
+    </script>
   </body>
 </html>

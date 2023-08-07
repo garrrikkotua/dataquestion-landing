@@ -21,10 +21,9 @@
           class="px-8 sm:items-center sm:justify-center sm:px-0 sm:space-x-5 sm:flex mt-9"
         >
           <a
-            href="https://app.dataquestion.io"
-            title=""
             class="inline-flex items-center justify-center w-full px-8 py-3 text-lg font-bold text-white transition-all duration-200 bg-brand border-2 border-transparent sm:w-auto rounded-xl font-pj hover:bg-brand-light focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand"
             role="button"
+            id="buyButton"
           >
             Get started
           </a>
@@ -83,6 +82,7 @@
   </section>
 </div>
 
+<script is:inline src="https://cdn.paddle.com/paddle/paddle.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const video = document.getElementById("myVideo");
@@ -91,5 +91,15 @@
     scrollButton?.addEventListener("click", () => {
       video?.scrollIntoView({ behavior: "smooth" });
     });
+
+    function openCheckout() {
+      Paddle.Checkout.open({
+        product: import.meta.env.PUBLIC_PADDLE_PRODUCT_ID,
+      });
+    }
+
+    document
+      ?.getElementById("buyButton")
+      ?.addEventListener("click", openCheckout, false);
   });
 </script>
