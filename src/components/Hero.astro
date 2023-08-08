@@ -25,7 +25,7 @@
             role="button"
             id="buyButton"
           >
-            Get started
+            Buy now
           </a>
 
           <a
@@ -51,7 +51,9 @@
           </a>
         </div>
 
-        <p class="mt-8 text-base text-gray-500 font-inter">7-day free trial</p>
+        <p class="mt-8 text-base text-gray-500 font-inter">
+          Lifetime deal for $99
+        </p>
       </div>
     </div>
 
@@ -59,21 +61,18 @@
       <div class="relative">
         <div class="absolute inset-0 h-2/3 bg-gray-50"></div>
         <div class="relative mx-auto">
-          <div class="lg:max-w-6xl lg:mx-auto">
-            <div class="aspect-video text-center min-h-[50px]">
-              <video
-                id="myVideo"
-                class="transform scale-75 rounded-lg shadow-xl"
-                muted
-                controls
-                autoplay
-                preload="auto"
-              >
-                <source
-                  src="https://pub-18662031c268404a8d060de159d2f5ba.r2.dev/demo.mp4"
-                  type="video/mp4"
-                />
-              </video>
+          <div class="lg:max-w-4xl lg:mx-auto">
+            <div class="aspect-video relative mt-8">
+              <iframe
+                width="100%"
+                height="100%"
+                class="rounded-xl shadow-xl"
+                src="https://www.youtube.com/embed/2I2SkrM45hc?autoplay=1&mute=1&controls=1&origin=https%3A%2F%2dataquestion.io&playsinline=1&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&widgetid=1"
+                title="DataQuestion Demo"
+                frameborder="0"
+                id="widget1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -85,21 +84,18 @@
 <script is:inline src="https://cdn.paddle.com/paddle/paddle.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const video = document.getElementById("myVideo");
+    const video = document.getElementById("widget1");
     const scrollButton = document.getElementById("scrollButton");
 
     scrollButton?.addEventListener("click", () => {
       video?.scrollIntoView({ behavior: "smooth" });
     });
 
-    function openCheckout() {
-      Paddle.Checkout.open({
-        product: import.meta.env.PUBLIC_PADDLE_PRODUCT_ID,
-      });
-    }
+    const pricingSection = document.getElementById("pricing");
+    const getStartedButton = document.getElementById("buyButton");
 
-    document
-      ?.getElementById("buyButton")
-      ?.addEventListener("click", openCheckout, false);
+    getStartedButton?.addEventListener("click", () => {
+      pricingSection?.scrollIntoView({ behavior: "smooth" });
+    });
   });
 </script>

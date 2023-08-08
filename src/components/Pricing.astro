@@ -1,585 +1,567 @@
 ---
-const price = 29;
-const period = "month";
+const price = 99;
+const period = "lifetime";
 
 export interface Props {
-    id: string;
+  id: string;
 }
 
 const id = Astro.props.id;
 ---
 
 <section class="py-12 bg-gray-50 sm:py-16 lg:py-20" id={id}>
-    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="text-center">
-            <div class="flex items-center justify-center">
-                <h2 class="ml-3 text-4xl font-bold text-gray-900 font-pj">
-                    Get DataQuestion
-                </h2>
-            </div>
-            <p class="mt-4 text-base font-medium text-gray-600 font-pj">
-                7-day free trial, then ${price}/{period}
-            </p>
-        </div>
-
-        <div class="relative max-w-sm mx-auto mt-8 md:mt-12 md:max-w-3xl">
-            <div class="absolute -inset-4">
-                <div
-                    class="w-full h-full mx-auto opacity-30 blur-lg filter"
-                    style="background: linear-gradient(90deg, #148DFC -0.55%, #32A1FD 22.86%, #4FB5FE 48.36%, #6DC8FE 73.33%, #8ADCFF 99.34%)"
-                >
-                </div>
-            </div>
-
-            <div
-                class="relative overflow-hidden bg-white border border-gray-200 rounded-2xl"
-            >
-                <div class="p-6 md:px-10 md:py-9">
-                    <div
-                        class="grid items-center grid-cols-1 md:grid-cols-7 gap-y-9 md:gap-y-0"
-                    >
-                        <div class="md:col-span-3 xl:pr-2 space-y-9">
-                            <div class="flex items-center">
-                                <div
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
-                                >
-                                    <svg
-                                        class="w-5 h-5 text-gray-900"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        stroke="currentColor"
-                                        fill="black"
-                                        viewBox="0 0 576 512"
-                                    >
-                                        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                        <path
-                                            d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z"
-                                        ></path></svg
-                                    >
-                                </div>
-                                <div class="ml-4">
-                                    <p
-                                        class="text-lg font-bold text-gray-900 font-pj"
-                                    >
-                                        Unlimited AI queries
-                                    </p>
-                                    <p
-                                        class="mt-1 text-sm font-normal text-gray-600 font-pj"
-                                    >
-                                        Ask as many questions as you want
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
-                                >
-                                    <svg
-                                        class="w-5 h-5 text-gray-900"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="none"
-                                        viewBox="0 0 448 512"
-                                        stroke="currentColor"
-                                    >
-                                        <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                                        <path
-                                            fill="currentColor"
-                                            d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <p
-                                        class="text-lg font-bold text-gray-900 font-pj"
-                                    >
-                                        Unlimited databases
-                                    </p>
-                                    <p
-                                        class="mt-1 text-sm font-normal text-gray-600 font-pj"
-                                    >
-                                        Connect as many Postgres and MySQL
-                                        databases as you want
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
-                                >
-                                    <svg
-                                        class="w-5 h-5 text-gray-900"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="black"
-                                        viewBox="0 0 576 512"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <p
-                                        class="text-lg font-bold text-gray-900 font-pj"
-                                    >
-                                        Unlimited dashboards
-                                    </p>
-                                    <p
-                                        class="mt-1 text-sm font-normal text-gray-600 font-pj"
-                                    >
-                                        Create as many AI charts and dashboards
-                                        as you want
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="hidden md:block">
-                                <svg
-                                    class="w-4 h-auto mx-auto text-gray-300"
-                                    viewBox="0 0 16 172"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 11)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 46)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 81)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 116)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 151)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 18)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 53)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 88)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 123)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 158)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 25)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 60)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 95)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 130)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 165)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 32)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 67)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 102)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 137)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 172)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 39)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 74)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 109)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 144)"
-                                    ></line>
-                                </svg>
-                            </div>
-
-                            <div class="block md:hidden">
-                                <svg
-                                    class="w-auto h-4 mx-auto text-gray-300"
-                                    viewBox="0 0 172 16"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)"
-                                    ></line>
-                                    <line
-                                        y1="-0.5"
-                                        x2="18.0278"
-                                        y2="-0.5"
-                                        transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)"
-                                    ></line>
-                                </svg>
-                            </div>
-                        </div>
-
-                        <div class="md:col-span-3 xl:pl-2 space-y-9">
-                            <div class="flex items-center">
-                                <div
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
-                                >
-                                    <svg
-                                        class="w-5 h-5 text-gray-900"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="black"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <p
-                                        class="text-lg font-bold text-gray-900 font-pj"
-                                    >
-                                        Team workspace
-                                    </p>
-                                    <p
-                                        class="mt-1 text-sm font-normal text-gray-600 font-pj"
-                                    >
-                                        Invite up to 2 team members (max 3 users
-                                        in total)
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
-                                >
-                                    <svg
-                                        class="w-5 h-5 text-gray-900"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="black"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <p
-                                        class="text-lg font-bold text-gray-900 font-pj"
-                                    >
-                                        Custom Domain
-                                    </p>
-                                    <p
-                                        class="mt-1 text-sm font-normal text-gray-600 font-pj"
-                                    >
-                                        Add your own domain (coming soon)
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div
-                                    class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
-                                >
-                                    <svg
-                                        class="w-5 h-5 text-gray-900"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        fill="black"
-                                        viewBox="0 0 24 24"
-                                        stroke="currentColor"
-                                    >
-                                        <path
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                            stroke-width="2"
-                                            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                                        ></path>
-                                    </svg>
-                                </div>
-                                <div class="ml-4">
-                                    <p
-                                        class="text-lg font-bold text-gray-900 font-pj"
-                                    >
-                                        Support Chat
-                                    </p>
-                                    <p
-                                        class="mt-1 text-sm font-normal text-gray-600 font-pj"
-                                    >
-                                        We always answer in 24 hours, usually
-                                        much faster
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-8 text-center">
-            <p class="text-base font-medium text-gray-600 font-pj">
-                All our features are available to all users
-            </p>
-
-            <div class="flex items-end justify-center mt-10">
-                <p class="text-lg font-bold text-gray-400 font-pj">$</p>
-                <p class="text-6xl font-bold text-gray-900 font-pj">{price}</p>
-                <p class="text-lg font-bold text-gray-400 font-pj">/{period}</p>
-            </div>
-
-            <a
-                href="https://app.dataquestion.io"
-                title=""
-                class="relative inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white transition-all duration-200 bg-brand border border-transparent mt-9 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand font-pj hover:bg-opacity-90 rounded-xl"
-                role="button"
-            >
-                Get started for ${price} only
-            </a>
-
-            <p class="mt-4 text-sm font-normal text-gray-600 font-pj">
-                Need more users? <a
-                    href="mailto:hello@dataquestion.io"
-                    class="font-bold">Contact us</a
-                >
-            </p>
-        </div>
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="text-center">
+      <div class="flex items-center justify-center">
+        <h2 class="ml-3 text-4xl font-bold text-gray-900 font-pj">
+          Lock in the early bird price
+        </h2>
+      </div>
+      <p class="mt-4 text-base font-medium text-gray-600 font-pj">
+        ${price}/{period} for the first 100 customers
+      </p>
     </div>
+
+    <div class="relative max-w-sm mx-auto mt-8 md:mt-12 md:max-w-3xl">
+      <div class="absolute -inset-4">
+        <div
+          class="w-full h-full mx-auto opacity-30 blur-lg filter"
+          style="background: linear-gradient(90deg, #148DFC -0.55%, #32A1FD 22.86%, #4FB5FE 48.36%, #6DC8FE 73.33%, #8ADCFF 99.34%)"
+        >
+        </div>
+      </div>
+
+      <div
+        class="relative overflow-hidden bg-white border border-gray-200 rounded-2xl"
+      >
+        <div class="p-6 md:px-10 md:py-9">
+          <div
+            class="grid items-center grid-cols-1 md:grid-cols-7 gap-y-9 md:gap-y-0"
+          >
+            <div class="md:col-span-3 xl:pr-2 space-y-9">
+              <div class="flex items-center">
+                <div
+                  class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-900"
+                    xmlns="http://www.w3.org/2000/svg"
+                    stroke="currentColor"
+                    fill="black"
+                    viewBox="0 0 576 512"
+                  >
+                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      d="M234.7 42.7L197 56.8c-3 1.1-5 4-5 7.2s2 6.1 5 7.2l37.7 14.1L248.8 123c1.1 3 4 5 7.2 5s6.1-2 7.2-5l14.1-37.7L315 71.2c3-1.1 5-4 5-7.2s-2-6.1-5-7.2L277.3 42.7 263.2 5c-1.1-3-4-5-7.2-5s-6.1 2-7.2 5L234.7 42.7zM46.1 395.4c-18.7 18.7-18.7 49.1 0 67.9l34.6 34.6c18.7 18.7 49.1 18.7 67.9 0L529.9 116.5c18.7-18.7 18.7-49.1 0-67.9L495.3 14.1c-18.7-18.7-49.1-18.7-67.9 0L46.1 395.4zM484.6 82.6l-105 105-23.3-23.3 105-105 23.3 23.3zM7.5 117.2C3 118.9 0 123.2 0 128s3 9.1 7.5 10.8L64 160l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L128 160l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L128 96 106.8 39.5C105.1 35 100.8 32 96 32s-9.1 3-10.8 7.5L64 96 7.5 117.2zm352 256c-4.5 1.7-7.5 6-7.5 10.8s3 9.1 7.5 10.8L416 416l21.2 56.5c1.7 4.5 6 7.5 10.8 7.5s9.1-3 10.8-7.5L480 416l56.5-21.2c4.5-1.7 7.5-6 7.5-10.8s-3-9.1-7.5-10.8L480 352l-21.2-56.5c-1.7-4.5-6-7.5-10.8-7.5s-9.1 3-10.8 7.5L416 352l-56.5 21.2z"
+                    ></path></svg
+                  >
+                </div>
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-900 font-pj">
+                    Unlimited AI queries
+                  </p>
+                  <p class="mt-1 text-sm font-normal text-gray-600 font-pj">
+                    Ask as many questions as you want
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div
+                  class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-900"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 448 512"
+                    stroke="currentColor"
+                  >
+                    <!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <path
+                      fill="currentColor"
+                      d="M448 80v48c0 44.2-100.3 80-224 80S0 172.2 0 128V80C0 35.8 100.3 0 224 0S448 35.8 448 80zM393.2 214.7c20.8-7.4 39.9-16.9 54.8-28.6V288c0 44.2-100.3 80-224 80S0 332.2 0 288V186.1c14.9 11.8 34 21.2 54.8 28.6C99.7 230.7 159.5 240 224 240s124.3-9.3 169.2-25.3zM0 346.1c14.9 11.8 34 21.2 54.8 28.6C99.7 390.7 159.5 400 224 400s124.3-9.3 169.2-25.3c20.8-7.4 39.9-16.9 54.8-28.6V432c0 44.2-100.3 80-224 80S0 476.2 0 432V346.1z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-900 font-pj">
+                    Unlimited databases
+                  </p>
+                  <p class="mt-1 text-sm font-normal text-gray-600 font-pj">
+                    Connect as many Postgres and MySQL databases as you want
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div
+                  class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-900"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="black"
+                    viewBox="0 0 576 512"
+                    stroke="currentColor"
+                  >
+                    <path
+                      d="M304 240V16.6c0-9 7-16.6 16-16.6C443.7 0 544 100.3 544 224c0 9-7.6 16-16.6 16H304zM32 272C32 150.7 122.1 50.3 239 34.3c9.2-1.3 17 6.1 17 15.4V288L412.5 444.5c6.7 6.7 6.2 17.7-1.5 23.1C371.8 495.6 323.8 512 272 512C139.5 512 32 404.6 32 272zm526.4 16c9.3 0 16.6 7.8 15.4 17c-7.7 55.9-34.6 105.6-73.9 142.3c-6 5.6-15.4 5.2-21.2-.7L320 288H558.4z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-900 font-pj">
+                    Unlimited dashboards
+                  </p>
+                  <p class="mt-1 text-sm font-normal text-gray-600 font-pj">
+                    Create as many AI charts and dashboards as you want
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="hidden md:block">
+                <svg
+                  class="w-4 h-auto mx-auto text-gray-300"
+                  viewBox="0 0 16 172"
+                  fill="none"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 11)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 46)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 81)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 116)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 151)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 18)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 53)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 88)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 123)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 158)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 25)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 60)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 95)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 130)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 165)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 32)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 67)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 102)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 137)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 172)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 39)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 74)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 109)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.83205 -0.5547 -0.5547 0.83205 15 144)"
+                  ></line>
+                </svg>
+              </div>
+
+              <div class="block md:hidden">
+                <svg
+                  class="w-auto h-4 mx-auto text-gray-300"
+                  viewBox="0 0 172 16"
+                  fill="none"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 11 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 46 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 81 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 116 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 151 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 18 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 53 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 88 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 123 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 158 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 25 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 60 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 95 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 130 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 165 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 32 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 67 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 102 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 137 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 172 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 39 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 74 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 109 1)"
+                  ></line>
+                  <line
+                    y1="-0.5"
+                    x2="18.0278"
+                    y2="-0.5"
+                    transform="matrix(-0.5547 0.83205 0.83205 0.5547 144 1)"
+                  ></line>
+                </svg>
+              </div>
+            </div>
+
+            <div class="md:col-span-3 xl:pl-2 space-y-9">
+              <div class="flex items-center">
+                <div
+                  class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-900"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="black"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-900 font-pj">
+                    Team workspace
+                  </p>
+                  <p class="mt-1 text-sm font-normal text-gray-600 font-pj">
+                    Invite up to 2 team members (max 3 users in total)
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div
+                  class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-900"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="black"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-900 font-pj">
+                    Custom Domain
+                  </p>
+                  <p class="mt-1 text-sm font-normal text-gray-600 font-pj">
+                    Add your own domain (coming soon)
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <div
+                  class="inline-flex items-center justify-center flex-shrink-0 w-10 h-10 bg-white border border-gray-200 rounded-full"
+                >
+                  <svg
+                    class="w-5 h-5 text-gray-900"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="black"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-4">
+                  <p class="text-lg font-bold text-gray-900 font-pj">
+                    Support Chat
+                  </p>
+                  <p class="mt-1 text-sm font-normal text-gray-600 font-pj">
+                    We always answer in 24 hours, usually much faster
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-8 text-center">
+      <p class="text-base font-medium text-gray-600 font-pj">
+        DataQuestion will be available in September 2023.
+        <br />
+        Get a refundable lifetime deal now and lock in the early bird price.
+      </p>
+
+      <div class="flex items-end justify-center mt-10">
+        <p class="text-lg font-bold text-gray-400 font-pj">$</p>
+        <p class="text-6xl font-bold text-gray-900 font-pj">{price}</p>
+        <p class="text-lg font-bold text-gray-400 font-pj">/{period}</p>
+      </div>
+
+      <a
+        class="relative inline-flex items-center justify-center px-8 py-3.5 text-base font-bold text-white transition-all duration-200 bg-brand border border-transparent mt-9 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand font-pj hover:bg-opacity-90 rounded-xl"
+        role="button"
+        id="paddleCheckoutButton"
+      >
+        <span>Get lifetime access</span>
+      </a>
+
+      <p class="mt-4 text-sm font-normal text-gray-600 font-pj">
+        One-time payment
+      </p>
+    </div>
+  </div>
 </section>
+
+<script>
+  function openCheckout() {
+    Paddle.Checkout.open({
+      product: import.meta.env.PUBLIC_PADDLE_PRODUCT_ID,
+    });
+  }
+
+  document
+    ?.getElementById("paddleCheckoutButton")
+    ?.addEventListener("click", openCheckout, false);
+</script>
