@@ -1,0 +1,33 @@
+---
+const id = Astro.props.id;
+---
+
+<section class="py-12 bg-gray-50 sm:py-16 lg:py-20" id={id}>
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="text-center">
+      <div class="flex items-center justify-center">
+        <h2 class="ml-3 text-4xl font-bold text-gray-900 font-pj">
+          Testimonials
+        </h2>
+      </div>
+      <p class="mt-4 text-base font-medium text-gray-600 font-pj">
+        Hear from our early supporters
+      </p>
+    </div>
+  </div>
+  <script
+    type="text/javascript"
+    src="https://testimonial.to/js/iframeResizer.min.js"></script>
+  <iframe
+    id="testimonialto-dataquestion-tag-all-light"
+    src="https://embed-v2.testimonial.to/w/dataquestion?theme=light&card=base&loadMore=on&initialCount=20&tag=all"
+    frameborder="0"
+    scrolling="no"
+    width="100%"></iframe>
+  <script type="text/javascript">
+    iFrameResize(
+      { log: false, checkOrigin: false },
+      "#testimonialto-dataquestion-tag-all-light"
+    );
+  </script>
+</section>
