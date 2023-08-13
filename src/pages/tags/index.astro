@@ -1,0 +1,24 @@
+---
+import { getCollection } from "astro:content";
+import Header from "@components/blog/Header.astro";
+import Footer from "@components/blog/Footer.astro";
+import Layout from "@layouts/BlogLayout.astro";
+import Main from "@layouts/BlogMain.astro";
+import Tag from "@components/blog/Tag.astro";
+import getUniqueTags from "@utils/getUniqueTags";
+import { SITE } from "@config";
+
+const posts = await getCollection("blog");
+
+let tags = getUniqueTags(posts);
+---
+
+<Layout title={`Tags | ${SITE.title}`}>
+  <Header activeNav="tags" />
+  <Main pageTitle="Tags" pageDesc="All the tags used in posts.">
+    <ul>
+      {tags.map((tag) => <Tag name={tag} size="lg" />)}
+    </ul>
+  </Main>
+  <Footer />
+</Layout>

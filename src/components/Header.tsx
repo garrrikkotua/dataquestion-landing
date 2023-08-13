@@ -14,7 +14,11 @@ const Header = () => {
                 title=""
                 class="flex rounded outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
               >
-                <img class="w-auto h-8" src="dataquestion.svg" alt="" />
+                <img
+                  class="w-auto h-8"
+                  src="dataquestion.svg"
+                  alt="DataQuestion Logo"
+                />
               </a>
             </div>
 

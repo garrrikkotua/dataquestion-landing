@@ -1,5 +1,5 @@
 import { defineCollection } from "astro:content";
-import { blogSchema } from "./schemas";
+import { blogSchema } from "./_schemas";
 
 const blog = defineCollection({
   schema: blogSchema,
