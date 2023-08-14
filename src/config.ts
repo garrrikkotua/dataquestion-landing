@@ -1,12 +1,12 @@
 import type { Site, SocialObjects } from "./types";
 
 export const SITE: Site = {
-  website: "https://dataquestion.io/",
+  website: "dataquestion.io",
   author: "Igor Kotua",
-  desc: "Blog about databases, SQL, data analytics and more.",
-  title: "DataQuestion Blog",
+  desc: "SQL Query Builder with AI, Charts, and Dashboards",
+  title: "DataQuestion",
   ogImage: "astropaper-og.jpg",
-  lightAndDarkMode: true,
+  lightAndDarkMode: false,
   postPerPage: 3,
 };
 

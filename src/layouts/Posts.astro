@@ -1,9 +1,7 @@
 ---
 import { SITE } from "@config";
-import Layout from "@layouts/BlogLayout.astro";
+import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/BlogMain.astro";
-import Header from "@components/blog/Header.astro";
-import Footer from "@components/blog/Footer.astro";
 import Card from "@components/blog/Card";
 import LinkButton from "@components/blog/LinkButton.astro";
 import slugify from "@utils/slugify";
@@ -21,16 +19,28 @@ const prev = pageNum > 1 ? "" : "disabled";
 const next = pageNum < totalPages ? "" : "disabled";
 ---
 
-<Layout title={`Posts | ${SITE.title}`}>
-  <Header activeNav="posts" />
-  <Main pageTitle="Posts" pageDesc="All the articles I've posted.">
-    <ul>
-      {
-        posts.map(({ data }) => (
-          <Card href={`/blog/${slugify(data)}`} frontmatter={data} />
-        ))
-      }
-    </ul>
+<Layout
+  title={`Latest articles about SQL and databases | ${SITE.title}`}
+  description="Latest articles about SQL and databases"
+>
+  <Main
+    pageTitle="Blog"
+    pageDesc="Latest articles about SQL and databases"
+    additoinal="Insights, ideas and inspiration for SQL and databases"
+  >
+    <div class="flow-root max-w-5xl mx-auto mt-12 space-y-20 sm:mt-16 lg:mt-20">
+      <div class="-my-10 divide-y divide-gray-800">
+        {
+          posts.map(({ data }) => (
+            <Card
+              href={`/blog/${slugify(data)}`}
+              frontmatter={data}
+              siteOrigin={Astro.url.origin}
+            />
+          ))
+        }
+      </div>
+    </div>
   </Main>
 
   {
@@ -61,7 +71,6 @@ const next = pageNum < totalPages ? "" : "disabled";
       </nav>
     )
   }
-  <Footer noMarginTop={totalPages > 1} />
 </Layout>
 
 <style>

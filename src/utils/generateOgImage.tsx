@@ -39,7 +39,7 @@ const ogImage = (text: string) => {
           top: "-1px",
           right: "-1px",
           border: "4px solid #000",
-          background: "#ecebeb",
+          background: "#148DFC",
           opacity: "0.9",
           borderRadius: "4px",
           display: "flex",

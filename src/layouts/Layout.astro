@@ -1,14 +1,30 @@
 ---
-export interface Props {
-  title: string;
-}
-
 import Header from "../components/Header";
 import Footer from "../components/Footer.astro";
 import CTA from "../components/CTA.astro";
+import { SITE } from "@config";
 import "@styles/main.css";
 
-const { title } = Astro.props;
+export interface Props {
+  title?: string;
+  author?: string;
+  description?: string;
+  ogImage?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = SITE.title,
+  author = SITE.author,
+  description = SITE.desc,
+  ogImage = SITE.ogImage,
+  canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+} = Astro.props;
+
+const socialImageURL = new URL(
+  ogImage ? ogImage : SITE.ogImage,
+  Astro.url.origin
+).href;
 ---
 
 <!DOCTYPE html>
@@ -16,45 +32,38 @@ const { title } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="Build intelligent SQL queries with AI-powered features. Visualize data using charts and dashboards. Enhance your data analysis with our SQL query builder tool."
-    />
-
-    <!-- Open Graph Meta Tags -->
-    <meta
-      property="og:title"
-      content="SQL Query Builder with AI, Charts, and Dashboards"
-    />
-    <meta
-      property="og:description"
-      content="Build intelligent SQL queries with AI-powered features. Visualize data using charts and dashboards. Enhance your data analysis with our SQL query builder tool."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dataquestion.io" />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="SQL Query Builder with AI, Charts, and Dashboards"
-    />
-    <meta
-      name="twitter:description"
-      content="Build intelligent SQL queries with AI-powered features. Visualize data using charts and dashboards. Enhance your data analysis with our SQL query builder tool."
-    />
-
+    <link rel="canonical" href={canonicalURL} />
     <meta name="generator" content={Astro.generator} />
-    <title>{title} | DataQuestion</title>
+
+    <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- General Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="author" content={author} />
     <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:image" content={socialImageURL} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={socialImageURL} />
   </head>
   <body>
     <Header client:visible />
-    <slot />
+    <slot class="bg-gray-50" />
     <CTA />
     <Footer />
     <script is:inline src="https://cdn.paddle.com/paddle/paddle.js"></script>

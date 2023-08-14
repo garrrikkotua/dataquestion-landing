@@ -91,6 +91,15 @@ const Header = () => {
                 {" "}
                 How it works{" "}
               </a>
+
+              <a
+                href="/blog"
+                title=""
+                class="text-base font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none font-pj hover:text-opacity-50 focus:ring-1 focus:ring-gray-900 focus:ring-offset-2"
+              >
+                {" "}
+                Blog{" "}
+              </a>
             </div>
 
             <div class="hidden lg:ml-auto lg:flex lg:items-center lg:space-x-10">
