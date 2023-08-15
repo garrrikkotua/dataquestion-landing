@@ -1,0 +1,116 @@
+---
+export interface Props {
+  id: string;
+}
+
+const id = Astro.props.id;
+import { Image } from "astro:assets";
+import dbImage from "@assets/dataquestion_db_connect.png";
+import queryImage from "@assets/dataquestion_query_builder.png";
+import frameImage from "@assets/dataquestion_frame.png";
+---
+
+<section class="py-12 bg-gray-50 sm:py-16 lg:py-20" id={id}>
+  <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+    <div class="max-w-4xl px-4 mx-auto text-center sm:px-0">
+      <h2
+        class="text-3xl font-bold text-gray-900 sm:text-4xl xl:text-5xl font-pj"
+      >
+        How it works
+      </h2>
+    </div>
+
+    <div class="relative max-w-md mx-auto mt-12 md:max-w-none md:mt-20">
+      <div class="absolute inset-x-0 hidden top-36 xl:block">
+        <img
+          class="object-contain w-full h-auto max-w-xl mx-auto"
+          src="https://cdn.rareblocks.xyz/collection/clarity/images/how-it-works/2/line-pattern.png"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="grid grid-cols-1 text-center md:text-left md:grid-cols-3 md:gap-x-16 gap-y-12 xl:gap-x-32"
+      >
+        <div class="flex flex-col justify-between">
+          <div class="relative flex-shrink-0 mx-8 md:mx-0">
+            <div class="absolute -inset-1">
+              <div
+                class="w-full h-full mx-auto rotate-180 opacity-20 blur-lg filter"
+                style="background: linear-gradient(90deg, #148DFC -0.55%, #32A1FD 22.86%, #4FB5FE 48.36%, #6DC8FE 73.33%, #8ADCFF 99.34%)"
+              >
+              </div>
+            </div>
+            <Image
+              class="relative w-full h-auto mx-auto filter drop-shadow-lg"
+              src={dbImage}
+              alt="Database Connection"
+            />
+          </div>
+
+          <div class="mt-6 md:mt-10">
+            <h3 class="text-xl font-bold text-gray-900 font-pj">
+              Connect your database
+            </h3>
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600">
+              Simply add your database credentials and that's it!
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <div class="relative flex-shrink-0 mx-8 md:mx-0">
+            <div class="absolute -inset-1">
+              <div
+                class="w-full h-full mx-auto rotate-180 opacity-20 blur-lg filter"
+                style="background: linear-gradient(90deg, #148DFC -0.55%, #32A1FD 22.86%, #4FB5FE 48.36%, #6DC8FE 73.33%, #8ADCFF 99.34%)"
+              >
+              </div>
+            </div>
+            <Image
+              class="relative w-full h-auto mx-auto filter drop-shadow-lg"
+              src={queryImage}
+              alt="SQL Query Builder"
+            />
+          </div>
+
+          <div class="mt-6 md:mt-10">
+            <h3 class="text-xl font-bold text-gray-900 font-pj">
+              Ask your data question in a plain English
+            </h3>
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600">
+              Let our AI translate your question into SQL query.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col justify-between">
+          <div class="relative flex-shrink-0 mx-8 md:mx-0">
+            <div class="absolute -inset-1">
+              <div
+                class="w-full h-full mx-auto rotate-180 opacity-20 blur-lg filter"
+                style="background: linear-gradient(90deg, #148DFC -0.55%, #32A1FD 22.86%, #4FB5FE 48.36%, #6DC8FE 73.33%, #8ADCFF 99.34%)"
+              >
+              </div>
+            </div>
+            <Image
+              class="relative w-full h-auto mx-auto filter drop-shadow-lg scale-125"
+              src={frameImage}
+              alt="Bar Chart"
+            />
+          </div>
+
+          <div class="mt-6 md:mt-10">
+            <h3 class="text-xl font-bold text-gray-900 font-pj">
+              Create charts and share them with your colleagues!
+            </h3>
+            <p class="mt-4 text-base font-normal leading-7 text-gray-600">
+              Select the chart type and share it with your colleagues. Insights
+              just two clicks away!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
