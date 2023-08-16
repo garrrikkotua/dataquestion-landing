@@ -4,7 +4,7 @@
 
 .gradient-bg {
     content: "";
-    background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+    background: linear-gradient(60deg, #3347f7, #148DFC, #55a4f3, #5073b8, #198cae, #4ed4ef, #1098ad, #07b39b);
     animation: animategradient 3s ease infinite alternate;
     background-size: 300% 300%;
 }
@@ -21,4 +21,4 @@
     100% {
         background-position: 0 50%;
     }
-}
+}        

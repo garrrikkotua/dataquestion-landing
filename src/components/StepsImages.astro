@@ -5,9 +5,9 @@ export interface Props {
 
 const id = Astro.props.id;
 import { Image } from "astro:assets";
-import dbImage from "@assets/dataquestion_db_connect.png";
+import dbCroppedImage from "@assets/dataquestion_db_connect_cropped.png";
 import queryImage from "@assets/dataquestion_query_builder.png";
-import frameImage from "@assets/dataquestion_frame.png";
+import frameBigImage from "@assets/dataquestion_frame_big.png";
 ---
 
 <section class="py-12 bg-gray-50 sm:py-16 lg:py-20" id={id}>
@@ -43,7 +43,7 @@ import frameImage from "@assets/dataquestion_frame.png";
             </div>
             <Image
               class="relative w-full h-auto mx-auto filter drop-shadow-lg"
-              src={dbImage}
+              src={dbCroppedImage}
               alt="Database Connection"
             />
           </div>
@@ -58,7 +58,7 @@ import frameImage from "@assets/dataquestion_frame.png";
           </div>
         </div>
 
-        <div class="flex flex-col justify-between">
+        <div class="flex flex-col justify-between gap-4">
           <div class="relative flex-shrink-0 mx-8 md:mx-0">
             <div class="absolute -inset-1">
               <div
@@ -79,7 +79,8 @@ import frameImage from "@assets/dataquestion_frame.png";
               Ask your data question in a plain English
             </h3>
             <p class="mt-4 text-base font-normal leading-7 text-gray-600">
-              Let our AI translate your question into SQL query.
+              Just tell us what data you need and let SQL query builder do the
+              heavy lifting for you!
             </p>
           </div>
         </div>
@@ -95,12 +96,12 @@ import frameImage from "@assets/dataquestion_frame.png";
             </div>
             <Image
               class="relative w-full h-auto mx-auto filter drop-shadow-lg scale-125"
-              src={frameImage}
+              src={frameBigImage}
               alt="Bar Chart"
             />
           </div>
 
-          <div class="mt-6 md:mt-10">
+          <div class="mt-14 md:mt-10 lg:mt-6">
             <h3 class="text-xl font-bold text-gray-900 font-pj">
               Create charts and share them with your colleagues!
             </h3>

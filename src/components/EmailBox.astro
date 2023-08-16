@@ -1,4 +1,4 @@
-<div class="relative max-w-lg mx-auto mt-14">
+<div class="relative max-w-lg mx-auto mt-14 newsletter-form-loops-container">
   <div class="absolute -inset-x-2 -inset-y-5">
     <div class="w-full h-full mx-auto rotate-180 opacity-30 blur-lg filter">
     </div>
@@ -7,13 +7,13 @@
   <form
     action="https://app.loops.so/api/newsletter-form/cllbu9s1s009vmk0owp2yjmt8"
     method="POST"
-    class="relative"
+    class="relative newsletter-form-loops"
   >
     <input
       type="email"
       name="email"
       placeholder="Enter your email address"
-      class="block w-full px-5 py-6 text-base font-normal text-black placeholder-gray-600 bg-white border border-gray-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none"
+      class="block w-full px-5 py-6 text-base font-normal text-black placeholder-gray-600 bg-white border border-gray-300 rounded-xl focus:border-black focus:ring-1 focus:ring-black font-pj focus:outline-none newsletter-form-input-loops"
       required
     />
 
@@ -33,3 +33,61 @@
 <p class="mt-6 text-sm font-normal text-center text-gray-500 font-pj">
   No payments. No commitments
 </p>
+
+<script>
+  function submitHandler(event: any) {
+    event.preventDefault();
+    var container = event.target.parentNode;
+    var formInput = container.querySelector(
+      ".newsletter-form-input-loops"
+    ) as any;
+
+    const userGroup = "DataQuestion Beta Waitlist";
+
+    var formBody =
+      `userGroup=${encodeURIComponent(userGroup)}&email=` +
+      encodeURIComponent(formInput?.value);
+    fetch(event.target.action, {
+      method: "POST",
+      body: formBody,
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+    })
+      .then((res) => [res.ok, res.json(), res])
+      .then(([ok, dataPromise, res]) => {
+        if (ok) {
+          // redirect to /thanks page
+          window.location.href = "/thanks";
+        } else {
+          // show error message
+          const promise = dataPromise as Promise<any>;
+          promise.then((data: any) => {
+            var errorMessage = data?.error?.message;
+            if (errorMessage) {
+              alert(errorMessage);
+            } else {
+              alert("Something went wrong. Please try again later.");
+            }
+          });
+        }
+      });
+  }
+
+  var formContainers = document.getElementsByClassName(
+    "newsletter-form-loops-container"
+  );
+
+  // this is to add handlers
+  for (var i = 0; i < formContainers.length; i++) {
+    var formContainer = formContainers[i];
+    var handlersAdded = formContainer.classList.contains(
+      "newsletter-handlers-loops-added"
+    );
+    if (handlersAdded) continue;
+    formContainer
+      ?.querySelector(".newsletter-form-loops")
+      ?.addEventListener("submit", submitHandler);
+    formContainer.classList.add("newsletter-handlers-loops-added");
+  }
+</script>
