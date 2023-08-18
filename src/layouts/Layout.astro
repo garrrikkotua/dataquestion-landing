@@ -2,6 +2,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer.astro";
 import CTA from "../components/CTA.astro";
+import BigFooter from "@components/FooterBig.astro";
 import { SITE } from "@config";
 import "@styles/main.css";
 
@@ -65,7 +66,7 @@ const socialImageURL = new URL(
     <Header client:visible />
     <slot class="bg-gray-50" />
     <CTA />
-    <Footer />
+    <BigFooter />
     <script is:inline src="https://cdn.paddle.com/paddle/paddle.js"></script>
     <script>
       const isSandbox = import.meta.env.PUBLIC_PADDLE_IS_SANDBOX === "true";
