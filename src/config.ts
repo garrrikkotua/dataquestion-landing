@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Igor Kotua",
   desc: "SQL Query Builder with AI, Charts, and Dashboards",
   title: "DataQuestion",
-  ogImage: "astropaper-og.jpg",
+  ogImage: "dataquestion_og.png",
   lightAndDarkMode: false,
   postPerPage: 3,
 };
